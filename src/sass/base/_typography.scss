@@ -1,0 +1,31 @@
+@use '../helpers/functions' as *;
+
+/* josefin-sans-300 */
+@font-face {
+	font-family: 'Josefin Sans';
+	font-display: swap;
+	src: local(''), url('../assets/fonts/josefin-sans-v23-latin-300.woff2') format('woff2'),
+		url('../assets/fonts/josefin-sans-v23-latin-300.woff') format('woff');
+	font-style: normal;
+	font-weight: weight(light);
+}
+
+/* josefin-sans-regular */
+@font-face {
+	font-family: 'Josefin Sans';
+	font-display: swap;
+	src: local(''), url('../assets/fonts/josefin-sans-v23-latin-regular.woff2') format('woff2'),
+		url('../assets/fonts/josefin-sans-v23-latin-regular.woff') format('woff');
+	font-style: normal;
+	font-weight: weight(regular);
+}
+
+/* josefin-sans-600 */
+@font-face {
+	font-family: 'Josefin Sans';
+	font-display: swap;
+	src: local(''), url('../assets/fonts/josefin-sans-v23-latin-600.woff2') format('woff2'),
+		url('../assets/fonts/josefin-sans-v23-latin-600.woff') format('woff');
+	font-style: normal;
+	font-weight: weight(semiBold);
+}
