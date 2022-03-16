@@ -1,0 +1,53 @@
+{
+	"name": "base-apparel-coming-soon-master",
+	"version": "1.0.0",
+	"description": "Base Apparel coming soon page challenge on Frontend Mentor.",
+	"main": "public/index.html",
+	"scripts": {
+		"serve": "npx browser-sync start --server public --files public --no-notify",
+		"webp": "npx webpc -f ./src/assets/images/hero-desktop.jpg && npx webpc -f ./src/assets/images/hero-mobile.jpg",
+		"copy:html": "copyfiles -u 1 ./src/*.html public",
+		"copy:assets": "copyfiles -u 1 ./src/assets/**/*/**/* public",
+		"copy": "npm-run-all --parallel copy:*",
+		"watch:html": "onchange \"./src/*.html\" -- npm run copy:html",
+		"watch:sass": "npx sass -w ./src/sass/style.scss:./public/css/style.css",
+		"watch:assets": "onchange \"./src/assets/**/*\" -- npm run copy:assets",
+		"watch:js": "npx babel ./src/js/script.js --watch --out-file ./public/js/script.js --source-maps",
+		"watch": "npm-run-all --parallel watch:*",
+		"build:sass": "npx sass ./src/sass:./public/css",
+		"build:groupMedia": "npx group-css-media-queries ./public/css/style.css ./public/css/style.css",
+		"build:autoprefixer": "npx postcss ./public/css/style.css -u autoprefixer -r",
+		"build:compressed": "npx sass ./public/css/style.css:./public/css/style.min.css --style compressed",
+		"build:js": "npx babel ./src/js/script.js --out-file ./public/js/script.js",
+		"build:minify": "npx minify ./public/js/script.js --out-file ./public/js/script.min.js --mangle.keepClassName",
+		"start": "npm-run-all copy --parallel watch serve",
+		"build": "npm-run-all copy build:*"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Valeri85/Base-apparel.git"
+	},
+	"keywords": [],
+	"author": "Valeri",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/Valeri85/Base-apparel/issues"
+	},
+	"homepage": "https://github.com/Valeri85/Base-apparel#readme",
+	"devDependencies": {
+		"@babel/cli": "^7.17.6",
+		"@babel/core": "^7.17.5",
+		"@babel/preset-env": "^7.16.11",
+		"autoprefixer": "^10.4.2",
+		"babel-minify": "^0.5.1",
+		"browser-sync": "^2.27.7",
+		"copyfiles": "^2.4.1",
+		"group-css-media-queries": "^1.4.1",
+		"npm-run-all": "^4.1.5",
+		"onchange": "^7.1.0",
+		"postcss": "^8.4.8",
+		"postcss-cli": "^9.1.0",
+		"sass": "^1.49.9",
+		"webp-converter-cli": "^0.0.5"
+	}
+}
