@@ -4,11 +4,16 @@
 	--soft-red: hsl(0, 93%, 68%);
 	--dark-grayish-red: hsl(0, 6%, 24%);
 
-	--linear-1: 135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%);
-	--linear-2: 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%);
+	--linear-body: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+	--linear-button: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+	--hover: linear-gradient(135deg, hsl(0, 80%, 90%), hsl(0, 80%, 90%));
 
 	/* Font Family */
 	--ff: 'Josefin Sans', sans-serif;
 
+	/* Title font size */
+	--font-size-title: clamp(4.2rem, 5vw + 1rem, 5rem);
+
 	/* Animation */
+	--animation-time: 500ms;
 }

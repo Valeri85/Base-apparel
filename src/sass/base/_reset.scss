@@ -19,8 +19,8 @@ html {
     If all font sizes = 62.5% than rem * 0.625
     1rem = 10px; 0.1rem = 1px; 2.4rem = 24px...      
     */
-	font-weight: weight();
-	color: var();
+	font-weight: weight(regular);
+	color: var(--desaturated-red);
 	scroll-behavior: smooth;
 }
 
@@ -37,8 +37,6 @@ body {
 body,
 h1,
 p,
-figure,
-blockquote,
 button {
 	margin: 0;
 	padding: 0;

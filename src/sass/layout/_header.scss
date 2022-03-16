@@ -1,0 +1,8 @@
+@use '../helpers/mixins' as *;
+
+.header {
+	margin-bottom: 4em;
+	&__logo {
+		margin: 1.9em 0 2em 2em;
+	}
+}

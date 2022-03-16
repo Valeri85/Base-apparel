@@ -1,2 +1,64 @@
 @use '../helpers/functions' as *;
 @use '../helpers/mixins' as *;
+
+.main {
+	width: em(375);
+	padding-inline: 1.9em;
+	text-align: center;
+	&__title {
+		margin-bottom: 0.35em;
+		font-size: var(--font-size-title);
+		font-weight: weight(light);
+		line-height: 1;
+		letter-spacing: em(3.5);
+		text-transform: uppercase;
+		&-dark {
+			color: var(--dark-grayish-red);
+			font-weight: weight(semiBold);
+		}
+	}
+	&__text {
+		font-size: 1.4rem;
+		margin-bottom: 2.25em;
+	}
+	&__form,
+	&__form-input,
+	&__form-button {
+		border-radius: em(50);
+	}
+	&__form {
+		display: flex;
+		justify-content: start;
+		position: relative;
+		border: 1px solid var(--desaturated-red);
+		&-input,
+		&-button {
+			border: 0;
+			outline: none;
+		}
+		&-input {
+			flex-basis: em(320);
+			padding: 1.25em 1.8em;
+			background-color: transparent;
+			font-family: inherit;
+			appearance: none;
+			&::placeholder {
+				letter-spacing: em(0.5);
+				color: var(--desaturated-red);
+			}
+		}
+		&-button {
+			display: grid;
+			place-content: center;
+			position: absolute;
+			inset: -1px -1px -1px 80%;
+			background-image: var(--linear-button);
+			box-shadow: 0px 10px 15px var(--desaturated-red);
+			cursor: pointer;
+			&:hover,
+			&:focus {
+				background-image: var(--hover);
+			}
+		}
+	}
+}

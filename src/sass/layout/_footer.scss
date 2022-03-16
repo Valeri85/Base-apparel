@@ -1,7 +1,15 @@
+@use '../helpers/mixins' as *;
+
 .footer {
 	padding-top: 1em;
 	text-align: center;
 	&__link {
-		color: var();
+		color: var(--soft-red);
+		text-decoration: none;
+		transition: color var(--animation-time) ease;
+		&:hover {
+			text-decoration: underline;
+			color: var(--dark-grayish-red);
+		}
 	}
 }
