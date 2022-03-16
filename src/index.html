@@ -6,18 +6,18 @@
 		<!-- 2) Displays site properly based on user's device -->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<!-- 3) Preload fonts -->
-		<link rel="preload" as="font" type="font/woff2" href="assets/fonts/josefin-sans-v23-latin-300.woff2" crossorigin />
+		<!-- <link rel="preload" as="font" type="font/woff2" href="assets/fonts/josefin-sans-v23-latin-300.woff2" crossorigin />
 		<link rel="preload" as="font" type="font/woff" href="assets/fonts/josefin-sans-v23-latin-300.woff" crossorigin />
 		<link rel="preload" as="font" type="font/woff2" href="assets/fonts/josefin-sans-v23-latin-regular.woff2" crossorigin />
 		<link rel="preload" as="font" type="font/woff" href="assets/fonts/josefin-sans-v23-latin-regular.woff" crossorigin />
 		<link rel="preload" as="font" type="font/woff2" href="assets/fonts/josefin-sans-v23-latin-600.woff2" crossorigin />
-		<link rel="preload" as="font" type="font/woff" href="assets/fonts/josefin-sans-v23-latin-600.woff" crossorigin />
+		<link rel="preload" as="font" type="font/woff" href="assets/fonts/josefin-sans-v23-latin-600.woff" crossorigin /> -->
 		<!-- 4) Preload css -->
-		<link rel="preload" as="style" href="css/style.min.css" />
+		<!-- <link rel="preload" as="style" href="css/style.min.css" /> -->
 		<!-- 5) Title -->
 		<title>Frontend Mentor | Base Apparel coming soon page</title>
 		<!-- 6) Favicon -->
-		<link rel="icon" type="image/png" sizes="32x32" href="./assets/images/icons/favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="assets/images/icons/favicon-32x32.png" />
 		<!-- 7) Author -->
 		<meta name="author" content="Valeri Makaridze" />
 		<!-- 8) Description -->
@@ -48,19 +48,70 @@
 		<!-- <script defer src="js/script.min.js"></script> -->
 		<script defer src="js/script.js"></script>
 	</head>
+
+	<!-- Body -->
 	<body>
-		We're coming soon Hello fellow shoppers! We're currently building our new fashion store. Add your email below to stay
-		up-to-date with announcements and our launch deals. Email Address
+		<!-- Header -->
+		<header class="header">
+			<!-- Logo -->
+			<img class="header__logo" src="assets/images/logo.svg" width="100" height="33" alt="" />
+			<!-- Girl -->
+			<picture class="header__picture">
+				<source media="(max-width: 1439px)" srcset="assets/images/hero-mobile.webp" type="image/webp" />
+				<source media="(max-width: 1439px)" srcset="assets/images/hero-mobile.jpg" />
+				<source media="(min-width: 1440px)" srcset="assets/images/hero-desktop.webp" type="image/webp" />
+				<source media="(min-width: 1440px)" srcset="assets/images/hero-desktop.jpg" />
+				<img
+					class="header__image"
+					src="assets/images/hero-mobile.jpg"
+					width="375"
+					height="250"
+					alt="Beautiful fashion girl"
+				/>
+			</picture>
+		</header>
+
+		<!-- Main -->
+		<main class="main">
+			<!-- Content -->
+			<article class="main__content" aria-labeledby="main__title">
+				<!-- Title -->
+				<h1 class="main__title" id="main__title">
+					We're<br /><span class="main__title-dark">coming<br />soon</span>
+				</h1>
+				<!-- Text -->
+				<p class="main__text">
+					Hello fellow shoppers! We're currently building our new fashion store. Add your email below to stay up-to-date
+					with announcements and our launch deals.
+				</p>
+				<!-- Form -->
+				<form action="" class="main__form">
+					<!-- Search -->
+					<input
+						class="main__form-input"
+						id="search"
+						type="search"
+						name="search"
+						placeholder="Email Address"
+						aria-label="Search"
+					/>
+					<!-- Submit -->
+					<button class="main__form-button" type="submit" aria-label="Submit">
+						<img class="main__form-icon" src="assets/images/icons/icon-arrow.svg" alt="" aria-hidden="true" />
+					</button>
+				</form>
+			</article>
+		</main>
 
 		<!-- Footer -->
 		<footer class="footer">
 			<p class="footer__text">
 				Challenge by
-				<a class="footer__link" href="https://www.frontendmentor.io?ref=challenge" target="_blank"> Frontend Mentor </a>.
+				<a class="footer__link" href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
 			</p>
 			<p class="footer__text">
 				Coded by
-				<a class="footer__link" href="https://www.frontendmentor.io/profile/Valeri85" target="_blank"> Valeri </a>.
+				<a class="footer__link" href="https://www.frontendmentor.io/profile/Valeri85" target="_blank">Valeri</a>.
 			</p>
 		</footer>
 	</body>
