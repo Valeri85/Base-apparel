@@ -1,8 +1,12 @@
 @use '../helpers/mixins' as *;
 
 .footer {
-	padding-top: 1em;
+	padding: 1em;
+	margin-top: auto;
 	text-align: center;
+	@include desktop {
+		grid-area: footer;
+	}
 	&__link {
 		color: var(--soft-red);
 		text-decoration: none;

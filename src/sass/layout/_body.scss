@@ -4,4 +4,16 @@ body {
 	display: grid;
 	place-items: center;
 	background-image: var(--linear-body);
+	@include desktop {
+		display: grid;
+		grid:
+			'header picture'
+			'main picture'
+			'footer picture' / 60% 40%;
+		position: relative;
+		background-image: url('../../assets/images/bg-pattern-desktop.svg'), var(--linear-body);
+		background-repeat: no-repeat;
+		background-position: 0% 60%;
+		background-size: 60%;
+	}
 }

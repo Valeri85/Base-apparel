@@ -5,6 +5,12 @@
 	width: em(375);
 	padding-inline: 1.9em;
 	text-align: center;
+	@include desktop {
+		grid-area: main;
+		width: 100%;
+		padding: 0 17em 0 10em;
+		text-align: left;
+	}
 	&__title {
 		margin-bottom: 0.35em;
 		font-size: var(--font-size-title);
@@ -20,6 +26,9 @@
 	&__text {
 		font-size: 1.4rem;
 		margin-bottom: 2.25em;
+		@include desktop {
+			font-size: 1.8rem;
+		}
 	}
 	&__form,
 	&__form-input,
@@ -37,27 +46,53 @@
 			outline: none;
 		}
 		&-input {
-			flex-basis: em(320);
+			flex-basis: 70%;
 			padding: 1.25em 1.8em;
 			background-color: transparent;
 			font-family: inherit;
 			appearance: none;
+			@include desktop {
+				flex-basis: 72.5%;
+				font-size: 1.6rem;
+			}
 			&::placeholder {
 				letter-spacing: em(0.5);
 				color: var(--desaturated-red);
 			}
+		}
+		&-error-icon,
+		&-error-message {
+			visibility: visible;
+			opacity: 1;
+			transition: opacity var(--animation-time) ease, visibility var(--animation-time) ease;
+		}
+		&-error-icon {
+			align-self: center;
 		}
 		&-button {
 			display: grid;
 			place-content: center;
 			position: absolute;
 			inset: -1px -1px -1px 80%;
+			@-moz-document url-prefix() {
+				width: em(76.5);
+				@include desktop {
+					width: em(118);
+				}
+			}
 			background-image: var(--linear-button);
 			box-shadow: 0px 10px 15px var(--desaturated-red);
 			cursor: pointer;
 			&:hover,
 			&:focus {
 				background-image: var(--hover);
+			}
+		}
+		&-error-message {
+			color: var(--soft-red);
+			@include desktop {
+				padding: 0.5em 0 0 2.2em;
+				text-align: left;
 			}
 		}
 	}
